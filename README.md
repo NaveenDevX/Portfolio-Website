@@ -10,7 +10,7 @@ A modern, responsive portfolio website built with **React**, **TypeScript**, **V
 
 ## 🌐 Live Demo
 
-Check out the live project: [Portfolio Website](https://github.com/NaveenDevX/Portfolio-Website)
+Check out the live project: [Portfolio Website](https://portfolio-website-wheat-nine-81.vercel.app/)
 
 ---
 
