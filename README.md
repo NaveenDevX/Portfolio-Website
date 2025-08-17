@@ -1,73 +1,42 @@
-# Welcome to your Lovable project
+# 🚀 Portfolio Website
 
-## Project info
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) 
+[![Node Version](https://img.shields.io/badge/Node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
+[![React Version](https://img.shields.io/badge/React-18.0-blue)](https://reactjs.org/)
 
-**URL**: https://lovable.dev/projects/d6886b5b-fa91-4348-a69e-241e8c9bd69a
+A modern, responsive portfolio website built with **React**, **TypeScript**, **Vite**, **Tailwind CSS**, and **shadcn-ui**.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🌐 Live Demo
 
-**Use Lovable**
+Check out the live project: [Portfolio Website](https://github.com/NaveenDevX/Portfolio-Website)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d6886b5b-fa91-4348-a69e-241e8c9bd69a) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🖼️ Screenshots
 
-**Use your preferred IDE**
+![Homepage](screenshots/homepage.png)  
+![Projects Section](screenshots/projects.png)  
+*Add your own screenshots in the `screenshots/` folder.*
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠️ Features
 
-Follow these steps:
+- Fully responsive design for all devices  
+- Dark & light mode support  
+- Smooth animations and transitions  
+- Easily customizable components  
+- Optimized for performance  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 💻 Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+Follow these steps to run the project locally:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d6886b5b-fa91-4348-a69e-241e8c9bd69a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/NaveenDevX/Portfolio-Website.git
+cd Portfolio-Website
