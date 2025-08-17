@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Futuristic Cyberpunk Design System
+Dark theme with neon accents, gradients, and glowing effects
+All colors MUST be HSL for dark theme compatibility
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@layer base {
+  :root {
+    /* Dark cyberpunk base colors */
+    --background: 220 15% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 15% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 15% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Neon cyan primary */
+    --primary: 190 100% 50%;
+    --primary-foreground: 220 15% 6%;
+
+    /* Purple secondary */
+    --secondary: 270 70% 60%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Dark gray muted */
+    --muted: 220 15% 12%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    /* Neon green accent */
+    --accent: 120 100% 50%;
+    --accent-foreground: 220 15% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 12%;
+    --ring: 190 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom cyberpunk colors */
+    --neon-blue: 190 100% 50%;
+    --neon-purple: 270 70% 60%;
+    --neon-green: 120 100% 50%;
+    --neon-pink: 320 100% 70%;
+    --dark-bg: 220 15% 6%;
+    --dark-surface: 220 15% 8%;
+    --dark-elevated: 220 15% 12%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-purple)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-pink)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--neon-green)), hsl(var(--neon-blue)));
+    --gradient-dark: linear-gradient(135deg, hsl(var(--dark-bg)), hsl(var(--dark-elevated)));
+
+    /* Glows and shadows */
+    --glow-primary: 0 0 20px hsl(var(--neon-blue) / 0.5);
+    --glow-secondary: 0 0 20px hsl(var(--neon-purple) / 0.5);
+    --glow-accent: 0 0 20px hsl(var(--neon-green) / 0.5);
+    --shadow-neon: 0 0 30px hsl(var(--neon-blue) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono overflow-x-hidden;
+    font-family: 'Inter', sans-serif;
+    background: hsl(var(--dark-bg));
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--dark-bg));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--neon-blue) / 0.5);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--neon-blue) / 0.8);
+  }
+
+  /* Text selection */
+  ::selection {
+    background: hsl(var(--neon-blue) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  /* Cyberpunk button variants */
+  .btn-cyber-primary {
+    @apply bg-transparent border-2 border-primary text-primary px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    box-shadow: var(--glow-primary);
+  }
+
+  .btn-cyber-primary:hover {
+    @apply bg-primary text-primary-foreground;
+    box-shadow: var(--shadow-neon);
+    transform: translateY(-2px);
+  }
+
+  .btn-cyber-secondary {
+    @apply bg-transparent border-2 border-secondary text-secondary px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    box-shadow: var(--glow-secondary);
+  }
+
+  .btn-cyber-secondary:hover {
+    @apply bg-secondary text-secondary-foreground;
+    transform: translateY(-2px);
+  }
+
+  /* Glowing text */
+  .text-glow-primary {
+    text-shadow: 0 0 10px hsl(var(--neon-blue) / 0.8);
+  }
+
+  .text-glow-secondary {
+    text-shadow: 0 0 10px hsl(var(--neon-purple) / 0.8);
+  }
+
+  .text-glow-accent {
+    text-shadow: 0 0 10px hsl(var(--neon-green) / 0.8);
+  }
+
+  /* Cyberpunk card */
+  .cyber-card {
+    @apply bg-card border border-border backdrop-blur-sm rounded-xl p-6;
+    background: linear-gradient(135deg, hsl(var(--dark-surface) / 0.8), hsl(var(--dark-elevated) / 0.6));
+    box-shadow: 0 8px 32px hsl(var(--neon-blue) / 0.1);
+    transition: var(--transition-smooth);
+  }
+
+  .cyber-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px hsl(var(--neon-blue) / 0.2);
+  }
+
+  /* Gradient background */
+  .gradient-bg {
+    background: var(--gradient-dark);
+  }
+
+  /* Typing animation */
+  .typing-animation::after {
+    content: '|';
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Pulse glow */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulse-glow {
+    from {
+      box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.4);
+    }
+    to {
+      box-shadow: 0 0 30px hsl(var(--neon-blue) / 0.8);
+    }
+  }
+
+  /* Neon border */
+  .neon-border {
+    position: relative;
+    background: linear-gradient(90deg, transparent, hsl(var(--neon-blue)), transparent);
+    height: 1px;
+  }
+
+  .neon-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--neon-purple)), transparent);
+    animation: slide 3s linear infinite;
+  }
+
+  @keyframes slide {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+}
